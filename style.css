@@ -474,3 +474,21 @@ body.page3 {
 .wish-text p {
     margin-bottom: 35px;
 }
+
+/* PHOTO SCROLL EFFECT */
+
+.memory{
+
+    opacity:0;
+    transform:translateY(50px);
+    transition:1s ease;
+
+}
+
+
+.memory.show{
+
+    opacity:1;
+    transform:translateY(0);
+
+}
