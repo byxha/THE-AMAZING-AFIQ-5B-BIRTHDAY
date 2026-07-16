@@ -1,4 +1,4 @@
-window.onload = function() {
+
 alert("HELLO");
     const stars = document.querySelector(".stars");
 
