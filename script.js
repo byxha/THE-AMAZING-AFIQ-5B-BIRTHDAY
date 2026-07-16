@@ -1,5 +1,5 @@
 window.onload = function() {
-
+alert("HELLO");
     const stars = document.querySelector(".stars");
 
     for (let i = 0; i < 80; i++) {
