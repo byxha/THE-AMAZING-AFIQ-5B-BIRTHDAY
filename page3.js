@@ -1,7 +1,7 @@
 console.log("PAGE 3 JS RUNNING");
 
 
-// TITLE TYPING
+// ================= TITLE TYPEWRITER =================
 
 const title = document.getElementById("typing-title");
 
@@ -21,7 +21,7 @@ if (title) {
 
             i++;
 
-            setTimeout(typeTitle,80);
+            setTimeout(typeTitle, 80); // title speed
 
         }
 
@@ -33,60 +33,85 @@ if (title) {
 
 
 
-// WISH TYPING
 
-const wish = document.getElementById("wish");
-
-if(wish){
-
-    const paragraphs = wish.querySelectorAll("p");
-
-    let pIndex = 0;
+// ================= WISH TYPEWRITER =================
 
 
-    function typeParagraph(){
-
-        if(pIndex < paragraphs.length){
-
-            let p = paragraphs[pIndex];
-
-            let text = p.innerText;
-
-            p.innerHTML = "";
-
-            let i = 0;
+const paragraphs = document.querySelectorAll(".wish-text p");
 
 
-            function typing(){
-
-                if(i < text.length){
-
-                    p.innerHTML += text.charAt(i);
-
-                    i++;
-
-                    setTimeout(typing,5); // lagi laju
-
-                }
-
-                else{
-
-                    pIndex++;
-
-                    setTimeout(typeParagraph,300);
-
-                }
-
-            }
+paragraphs.forEach((p,index)=>{
 
 
-            typing();
+    const text = p.innerHTML;
+
+    p.innerHTML = "";
+
+    p.style.opacity = "1";
+
+
+    let i = 0;
+
+
+    function typeWish(){
+
+
+        if(i < text.length){
+
+
+            p.innerHTML += text.charAt(i);
+
+
+            i++;
+
+
+            setTimeout(typeWish,5); // lagi laju
+
 
         }
+
 
     }
 
 
-    typeParagraph();
+    setTimeout(typeWish,index * 800);
 
-}
+
+});
+
+
+
+
+
+
+// ================= PHOTO FADE IN =================
+
+
+const photos = document.querySelectorAll(".memory");
+
+
+const observer = new IntersectionObserver(entries=>{
+
+
+    entries.forEach(entry=>{
+
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+
+    });
+
+
+},{threshold:0.2});
+
+
+
+photos.forEach(photo=>{
+
+    observer.observe(photo);
+
+});
