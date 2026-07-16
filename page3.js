@@ -26,19 +26,21 @@ if (title) {
 
 // WISH TYPING EFFECT
 
+// WISH TYPING EFFECT
+
 const wish = document.getElementById("wish");
 
 if (wish) {
 
     const paragraphs = wish.querySelectorAll("p");
 
-    let paragraphIndex = 0;
+    let paragraph = 0;
 
-    function typeNextParagraph(){
+    function typeParagraph(){
 
-        if (paragraphIndex < paragraphs.length){
+        if (paragraph < paragraphs.length){
 
-            const p = paragraphs[paragraphIndex];
+            const p = paragraphs[paragraph];
 
             const text = p.innerText;
 
@@ -48,9 +50,9 @@ if (wish) {
 
             function typeLetter(){
 
-                if(i < text.length){
+                if (i < text.length){
 
-                    p.innerHTML += text[i];
+                    p.innerHTML += text.charAt(i);
 
                     i++;
 
@@ -58,9 +60,9 @@ if (wish) {
 
                 } else {
 
-                    paragraphIndex++;
+                    paragraph++;
 
-                    setTimeout(typeNextParagraph, 300);
+                    setTimeout(typeParagraph, 500);
 
                 }
 
@@ -72,6 +74,6 @@ if (wish) {
 
     }
 
-    typeNextParagraph();
+    typeParagraph();
 
 }
