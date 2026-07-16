@@ -20,7 +20,6 @@ if (stars) {
 }
 
 
-const countdownDate = new Date(Date.now() + 5000).getTime();
 
 const countdownDate = new Date(Date.now() + 5000).getTime();
 
