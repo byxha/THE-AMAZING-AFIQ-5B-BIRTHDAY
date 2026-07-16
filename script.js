@@ -17,8 +17,6 @@ alert("HELLO");
 
     }
 
-};
-
 const countdownDate = new Date(Date.now() + 5000).getTime();
 
 const timer = setInterval(function () {
