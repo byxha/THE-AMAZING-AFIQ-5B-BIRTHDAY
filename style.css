@@ -392,30 +392,30 @@ audio {
 
 /* PHOTO POSITION */
 
-/* PHOTO POSITION FOLLOWING LONG WISH */
+/* PHOTO POSITION FOLLOW WISH */
 
 .photo1 {
     top:180px;
 }
 
 .photo2 {
-    top:900px;
+    top:750px;
 }
 
 .photo3 {
-    top:1900px;
+    top:1500px;
 }
 
 .photo4 {
-    top:3000px;
+    top:2500px;
 }
 
 .photo5 {
-    top:4200px;
+    top:3600px;
 }
 
 .photo6 {
-    top:5600px;
+    top:4700px;
 }
 /* BUTTON */
 
@@ -490,21 +490,34 @@ body.page3 {
 .photo5 { transition-delay:0.5s; }
 .photo6 { transition-delay:0.6s; }
 
-.memory:nth-child(odd) img {
-    transform:rotate(-5deg);
-}
-
-
-.memory:nth-child(even) img {
-    transform:rotate(5deg);
-}.memory {
-    position:absolute;
-    width:200px;
-}
 
 .memory img {
     width:100%;
     padding:12px;
     background:#fffdf5;
     box-shadow:0 15px 25px rgba(0,0,0,0.25);
+}
+.memory {
+    positio9:absolute;
+    width:190px;
+}
+
+.left {
+    left:2%;
+}
+
+.right {
+    right:2%;
+}
+
+.photo1 img,
+.photo3 img,
+.photo5 img {
+    transform:rotate(5deg);
+}
+
+.photo2 img,
+.photo4 img,
+.photo6 img {
+    transform:rotate(-5deg);
 }
