@@ -23,3 +23,55 @@ if (title) {
     }, 200);
 
 }
+
+// WISH TYPING EFFECT
+
+const wish = document.getElementById("wish");
+
+if (wish) {
+
+    const paragraphs = wish.querySelectorAll("p");
+
+    let paragraphIndex = 0;
+
+    function typeNextParagraph(){
+
+        if (paragraphIndex < paragraphs.length){
+
+            const p = paragraphs[paragraphIndex];
+
+            const text = p.innerText;
+
+            p.innerText = "";
+
+            let i = 0;
+
+            function typeLetter(){
+
+                if(i < text.length){
+
+                    p.innerHTML += text[i];
+
+                    i++;
+
+                    setTimeout(typeLetter, 15);
+
+                } else {
+
+                    paragraphIndex++;
+
+                    setTimeout(typeNextParagraph, 300);
+
+                }
+
+            }
+
+            typeLetter();
+
+        }
+
+    }
+
+    typeNextParagraph();
+
+}
