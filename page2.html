@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
 
+    <title>GOOD BOYYY</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="container">
+
+    <h1>GOOD BOYYY</h1>
+
+    <h2>CONGRATULATIONS!!</h2>
+
+    <p>
+        You have successfully admitted<br>
+        that you're beban. 😌
+    </p>
+
+    <p>
+        No refunds.
+    </p>
+
+    <h2>
+        Let's play our national anthem first
+    </h2>
+
+
+    <audio id="anthem" controls>
+        <source src="anthem.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <br>
+
+    <button id="nextBtn" disabled>
+        NEXT
+    </button>
+
+
+</div>
+
+
+<script>
+
+const music = document.getElementById("anthem");
+const nextBtn = document.getElementById("nextBtn");
+
+
+music.onended = function(){
+
+    nextBtn.disabled = false;
+
+};
+
+
+nextBtn.onclick = function(){
+
+    window.location.href = "page3.html";
+
+};
+
+</script>
+
+
+</body>
+</html>
