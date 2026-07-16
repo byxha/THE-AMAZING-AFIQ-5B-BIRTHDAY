@@ -1,19 +1,23 @@
-const stars = document.querySelector(".stars");
+window.onload = function() {
 
-for (let i = 0; i < 80; i++) {
+    const stars = document.querySelector(".stars");
 
-    let star = document.createElement("span");
+    for (let i = 0; i < 80; i++) {
 
-    star.innerHTML = "✦";
+        let star = document.createElement("span");
 
-    star.style.left = Math.random() * 100 + "%";
-    star.style.top = Math.random() * 100 + "%";
+        star.innerHTML = "✦";
 
-    star.style.animationDelay = Math.random() * 3 + "s";
+        star.style.left = Math.random() * 100 + "%";
+        star.style.top = Math.random() * 100 + "%";
 
-    stars.appendChild(star);
+        star.style.animationDelay = Math.random() * 3 + "s";
 
-}
+        stars.appendChild(star);
+
+    }
+
+};
 
 const countdownDate = new Date(Date.now() + 5000).getTime();
 
