@@ -1,3 +1,4 @@
+console.log("page3 loaded");
 const title = document.getElementById("typing-title");
 
 if (title) {
