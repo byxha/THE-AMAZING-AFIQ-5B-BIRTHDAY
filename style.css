@@ -400,20 +400,18 @@ audio {
 
 }
 .memory {
-    position:absolute;
     width:130px;
+    margin:15px;
 }
 
 .memory.right {
-    right:-180px;
+    float:right;
 }
 
 
 .memory.left {
-    left:-180px;
+    float:left;
 }
-
-
 .memory img {
 
     width:100%;
