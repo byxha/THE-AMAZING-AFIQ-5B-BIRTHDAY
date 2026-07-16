@@ -248,8 +248,8 @@ button {
 
 /* PAGE 2 TEXT EFFECT */
 
-.container h1,
-.container h2 {
+.disco + .container h1,
+.disco + .container h2 {
     animation: popIn 1s ease;
 }
 
