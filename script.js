@@ -1,4 +1,3 @@
-// STAR ANIMATION
 const stars = document.querySelector(".stars");
 
 for (let i = 0; i < 80; i++) {
@@ -16,7 +15,6 @@ for (let i = 0; i < 80; i++) {
 
 }
 
-// COUNTDOWN
 const countdownDate = new Date(Date.now() + 5000).getTime();
 
 const timer = setInterval(function () {
