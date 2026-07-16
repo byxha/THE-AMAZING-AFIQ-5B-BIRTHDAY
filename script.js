@@ -1,3 +1,19 @@
+const stars = document.querySelector(".stars");
+
+for (let i = 0; i < 80; i++) {
+
+    let star = document.createElement("span");
+
+    star.innerHTML = "✦";
+
+    star.style.left = Math.random() * 100 + "%";
+    star.style.top = Math.random() * 100 + "%";
+
+    star.style.animationDelay = Math.random() * 3 + "s";
+
+    stars.appendChild(star);
+
+}
 const countdownDate = new Date(Date.now() + 5000).getTime();
 
 const timer = setInterval(function () {
