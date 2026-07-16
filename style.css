@@ -375,54 +375,6 @@ audio {
 }
 
 
-
-/* PHOTO FRAME */
-
-.memory {
-
-    width:180px;
-
-    margin:20px;
-
-    opacity:1;
-
-}
-
-.memory.show {
-
-    opacity:1;
-
-    transform:translateY(0);
-
-}
-
-
-.memory img {
-
-    width:100%;
-
-    padding:12px;
-
-    background:#fffdf5;
-
-    box-shadow:0 15px 25px rgba(0,0,0,0.3);
-
-}
-
-
-
-/* SIDE POSITION */
-
-.memory.right {
-    float:right;
-}
-
-
-.memory.left {
-    float:left;
-}
-
-
 /* BUTTON */
 
 #gayBtn {
@@ -451,28 +403,38 @@ audio {
 
 }
 .memory {
+
     width:180px;
-    margin:25px;
+    margin:20px;
+
+    opacity:1;
+
 }
 
 
 .memory.right {
     float:right;
+    margin-left:25px;
 }
 
 
 .memory.left {
     float:left;
+    margin-right:25px;
 }
 
 
 .memory img {
-    width:100%;
-    padding:12px;
-    background:#fffdf5;
-    box-shadow:0 15px 25px rgba(0,0,0,0.3);
-}
 
+    width:100%;
+
+    padding:12px;
+
+    background:#fffdf5;
+
+    box-shadow:0 15px 25px rgba(0,0,0,0.3);
+
+}
 
 .wish-text {
     width:45%;
