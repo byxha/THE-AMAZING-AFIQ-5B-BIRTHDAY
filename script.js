@@ -1,5 +1,4 @@
 
-alert("HELLO");
     const stars = document.querySelector(".stars");
 
     for (let i = 0; i < 80; i++) {
@@ -50,12 +49,11 @@ const timer = setInterval(function () {
 }, 1000);
 
 
-
 const noBtn = document.getElementById("noBtn");
 
+if (noBtn) {
+
 let escapeCount = 0;
-let lastX = 0;
-let lastY = 0;
 
 noBtn.onclick = function(event) {
 
@@ -69,7 +67,6 @@ noBtn.onclick = function(event) {
         let moveX;
         let moveY;
 
-        // lari jauh ke arah bertentangan
         if (event.clientX < window.innerWidth / 2) {
             moveX = window.innerWidth - 180;
         } else {
@@ -85,24 +82,24 @@ noBtn.onclick = function(event) {
         noBtn.style.left = moveX + "px";
         noBtn.style.top = moveY + "px";
 
-    } 
-    
-   else {
-
-    noBtn.classList.add("running");
-
-    const buttonPosition = noBtn.getBoundingClientRect();
-
-    if (buttonPosition.left < window.innerWidth / 2) {
-        noBtn.style.setProperty("--escape-direction", "120vw");
     } else {
-        noBtn.style.setProperty("--escape-direction", "-120vw");
-    }
 
-    setTimeout(() => {
-    noBtn.remove();
-}, 6000);
+        noBtn.classList.add("running");
+
+        const buttonPosition = noBtn.getBoundingClientRect();
+
+        if (buttonPosition.left < window.innerWidth / 2) {
+            noBtn.style.setProperty("--escape-direction", "120vw");
+        } else {
+            noBtn.style.setProperty("--escape-direction", "-120vw");
+        }
+
+        setTimeout(() => {
+            noBtn.remove();
+        }, 6000);
 
     }
 
 };
+
+}
