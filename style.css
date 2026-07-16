@@ -88,6 +88,7 @@ button {
     color: white;
     font-size: 18px;
     animation: sparkle 3s infinite;
+    z-index: 1;
 }
 
 @keyframes sparkle {
