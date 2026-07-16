@@ -496,9 +496,14 @@ audio {
 /* PAGE 3 NEWSPAPER WALLPAPER */
 
 .page3 {
+    margin:0;
     background:#e8e3d8;
+    color:black;
+    overflow-x:hidden;
 }
 
+
+/* newspaper wallpaper */
 
 .newspaper-bg {
 
@@ -506,6 +511,10 @@ audio {
     inset:0;
 
     background:
+    linear-gradient(
+        rgba(255,255,255,0.2),
+        rgba(255,255,255,0.2)
+    ),
     repeating-linear-gradient(
         0deg,
         rgba(0,0,0,0.05) 0px,
@@ -515,10 +524,15 @@ audio {
     ),
     #e8e3d8;
 
-    z-index:-1;
-
+    z-index:0;
 }
 
-body.page3 {
-    background:#e8e3d8;
+
+/* put content above wallpaper */
+
+#typing-title,
+.page-layout,
+#gayBtn {
+    position:relative;
+    z-index:5;
 }
