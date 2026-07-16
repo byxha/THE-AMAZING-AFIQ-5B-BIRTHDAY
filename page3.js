@@ -1,26 +1,25 @@
-console.log("page3 loaded");
 const title = document.getElementById("typing-title");
+
+console.log("JS jalan");
 
 if (title) {
 
-    const text = title.textContent.trim();
+    const text = "Breaking News: Jeybey Girl Falls for Keyel Boy";
 
-    title.textContent = "";
+    title.innerHTML = "";
 
     let i = 0;
 
-    function typing() {
+    const typing = setInterval(() => {
 
-        title.textContent += text[i];
+        title.innerHTML += text[i];
 
         i++;
 
-        if (i < text.length) {
-            setTimeout(typing, 80);
+        if (i >= text.length) {
+            clearInterval(typing);
         }
 
-    }
-
-    typing();
+    }, 200);
 
 }
