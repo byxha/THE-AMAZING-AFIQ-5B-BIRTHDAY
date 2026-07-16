@@ -380,18 +380,13 @@ audio {
 
 .memory {
 
-    position:absolute;
+    width:180px;
 
-    width:200px;
+    margin:20px;
 
-    opacity:0;
-
-    transform:translateY(50px);
-
-    transition:1s ease;
+    opacity:1;
 
 }
-
 
 .memory.show {
 
@@ -418,44 +413,14 @@ audio {
 
 /* SIDE POSITION */
 
-.left {
-
-    left:3%;
-
+.memory.right {
+    float:right;
 }
 
 
-.right {
-
-    right:3%;
-
+.memory.left {
+    float:left;
 }
-
-
-
-/* PHOTO FOLLOW TEXT */
-
-
-
-/* ROTATE AESTHETIC */
-
-.photo1 img,
-.photo3 img,
-.photo5 img {
-
-    transform:rotate(5deg);
-
-}
-
-
-.photo2 img,
-.photo4 img,
-.photo6 img {
-
-    transform:rotate(-5deg);
-
-}
-
 
 
 /* BUTTON */
