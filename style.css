@@ -122,17 +122,6 @@ button {
 }
 
 
-@keyframes sparkle {
-    from {
-        background-position: 0 0;
-    }
-
-    to {
-        background-position: 100px 100px;
-    }
-}
-
-
 /* Mobile */
 @media(max-width:600px){
 
