@@ -1,23 +1,27 @@
 const title = document.getElementById("typing-title");
 
-const text = title.innerHTML;
+if (title) {
 
-title.innerHTML = "";
+    const text = title.innerText;
 
-let i = 0;
+    title.innerText = "";
 
-function typing() {
+    let i = 0;
 
-    if (i < text.length) {
+    function typing() {
 
-        title.innerHTML += text.charAt(i);
+        if (i < text.length) {
 
-        i++;
+            title.innerText += text[i];
 
-        setTimeout(typing, 80);
+            i++;
+
+            setTimeout(typing, 80);
+
+        }
 
     }
 
-}
+    typing();
 
-typing();
+}
