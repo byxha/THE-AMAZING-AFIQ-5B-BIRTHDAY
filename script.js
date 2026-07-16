@@ -113,3 +113,4 @@ if (yesBtn) {
 yesBtn.addEventListener("click", function() {
     window.location.href = "page2.html";
 });
+}
