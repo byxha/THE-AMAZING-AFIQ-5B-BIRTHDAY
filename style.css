@@ -180,3 +180,62 @@ button {
     position: relative;
     z-index: 20;
 }
+/* PAGE 2 DISCO */
+
+.disco {
+    position: fixed;
+    inset: 0;
+    background:
+    radial-gradient(circle at 20% 20%, rgba(255,0,0,0.5), transparent 25%),
+    radial-gradient(circle at 80% 20%, rgba(0,255,255,0.5), transparent 25%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,0,0.5), transparent 25%);
+    animation: disco 3s infinite alternate;
+    z-index: 0;
+}
+
+
+@keyframes disco {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.3);
+    }
+
+}
+
+
+/* DANCERS */
+
+.dance {
+    position: fixed;
+    width: 180px;
+    bottom: 50px;
+    z-index: 5;
+    animation: danceMove 0.8s infinite alternate;
+}
+
+
+.dance.left {
+    left: 30px;
+}
+
+
+.dance.right {
+    right: 30px;
+}
+
+
+@keyframes danceMove {
+
+    from {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    to {
+        transform: translateY(-20px) rotate(5deg);
+    }
+
+}
