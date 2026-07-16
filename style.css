@@ -115,3 +115,48 @@ button {
     }
 
 }
+
+
+#noBtn.running {
+    position: fixed;
+    animation: runAway 6s linear forwards;
+}
+
+#noBtn.running::before,
+#noBtn.running::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 20px;
+    background: white;
+    bottom: -18px;
+    border-radius: 10px;
+    animation: legs 0.3s infinite alternate;
+}
+
+#noBtn.running::before {
+    left: 20px;
+}
+
+#noBtn.running::after {
+    right: 20px;
+}
+
+@keyframes legs {
+    from {
+        transform: rotate(20deg);
+    }
+    to {
+        transform: rotate(-20deg);
+    }
+}
+
+@keyframes runAway {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(120vw);
+    }
+}
