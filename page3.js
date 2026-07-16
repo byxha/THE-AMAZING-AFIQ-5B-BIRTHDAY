@@ -9,19 +9,19 @@ if (title) {
 
     const text = title.innerText;
 
-    title.innerHTML = "";
+    title.innerText = "";
 
     let i = 0;
 
-    function typeTitle(){
+    function typeTitle() {
 
-        if(i < text.length){
+        if (i < text.length) {
 
             title.innerHTML += text.charAt(i);
 
             i++;
 
-            setTimeout(typeTitle, 80); // title speed
+            setTimeout(typeTitle, 80);
 
         }
 
@@ -33,48 +33,54 @@ if (title) {
 
 
 
+// ================= WISH FAST TYPE EFFECT =================
 
-// ================= WISH TYPEWRITER =================
-
+// effect jalan ikut paragraph
 
 const paragraphs = document.querySelectorAll(".wish-text p");
 
 
-paragraphs.forEach((p,index)=>{
+paragraphs.forEach((p, index) => {
 
 
     const text = p.innerHTML;
 
+
     p.innerHTML = "";
 
-    p.style.opacity = "1";
+
+    setTimeout(() => {
 
 
-    let i = 0;
+        let i = 0;
 
 
-    function typeWish(){
+        function typeWish() {
 
 
-        if(i < text.length){
+            if (i < text.length) {
 
 
-            p.innerHTML += text.charAt(i);
+                p.innerHTML += text.charAt(i);
+
+                i++;
 
 
-            i++;
+                setTimeout(typeWish, 3);
 
 
-            setTimeout(typeWish,5); // lagi laju
+            }
 
 
         }
 
 
-    }
+        typeWish();
 
 
-    setTimeout(typeWish,index * 800);
+
+    }, index * 500);
+
 
 
 });
@@ -82,15 +88,13 @@ paragraphs.forEach((p,index)=>{
 
 
 
-
-
-// ================= PHOTO FADE IN =================
+// ================= PHOTO FADE IN SCROLL =================
 
 
 const photos = document.querySelectorAll(".memory");
 
 
-const observer = new IntersectionObserver(entries=>{
+const observer = new IntersectionObserver((entries)=>{
 
 
     entries.forEach(entry=>{
@@ -98,7 +102,9 @@ const observer = new IntersectionObserver(entries=>{
 
         if(entry.isIntersecting){
 
+
             entry.target.classList.add("show");
+
 
         }
 
@@ -106,7 +112,11 @@ const observer = new IntersectionObserver(entries=>{
     });
 
 
-},{threshold:0.2});
+}, {
+
+    threshold:0.2
+
+});
 
 
 
@@ -115,3 +125,26 @@ photos.forEach(photo=>{
     observer.observe(photo);
 
 });
+
+
+
+
+// ================= BUTTON NEXT PAGE =================
+
+
+const gayBtn = document.getElementById("gayBtn");
+
+
+if(gayBtn){
+
+
+    gayBtn.onclick = function(){
+
+
+        window.location.href = "page4.html";
+
+
+    }
+
+
+}
