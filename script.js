@@ -101,4 +101,4 @@ noBtn.onclick = function(event) {
         noBtn.remove();
     }, 6000);
 
-}
+};
