@@ -276,11 +276,7 @@ audio {
     border-radius: 20px;
 }
 
-
 /* ================= PAGE 3 ================= */
-
-
-.page3 {
 
 .page3 {
     margin:0;
@@ -289,7 +285,8 @@ audio {
     overflow-x:hidden;
 }
 
-/* newspaper background */
+
+/* OLD NEWSPAPER WALLPAPER */
 
 .newspaper-bg {
 
@@ -307,12 +304,14 @@ audio {
     ),
     #d8c08a;
 
-    background-size: 15px 15px, auto, auto;
+    background-size:15px 15px;
 
     z-index:0;
 }
 
-/* title */
+
+
+/* TITLE */
 
 #typing-title {
 
@@ -330,7 +329,7 @@ audio {
 
 
 
-/* whole page */
+/* CONTENT AREA */
 
 .page-layout {
 
@@ -342,14 +341,12 @@ audio {
 
 
 
-/* wish */
+/* WISH TEXT */
 
 .wish-text {
 
-
-  .wish-text {
-
     width:50%;
+
     margin:80px auto;
 
     font-family:Arial, sans-serif;
@@ -361,19 +358,12 @@ audio {
     color:black;
 
     text-align:justify;
-}
-
-    color:black;
-
-    text-align:justify;
-
 
 }
 
 
 
-/* photos */
-
+/* PHOTOS */
 
 .memory {
 
@@ -381,9 +371,7 @@ audio {
 
     width:220px;
 
-
 }
-
 
 
 .memory img {
@@ -399,78 +387,50 @@ audio {
 }
 
 
-
-/* left and right */
-
+/* LEFT RIGHT */
 
 .left {
-
     left:5%;
-
 }
 
 
 .right {
-
     right:5%;
-
 }
 
 
 
-/* photo positions */
-
+/* PHOTO POSITION */
 
 .photo1 {
-
     top:200px;
-
 }
-
 
 .photo2 {
-
     top:1100px;
-
 }
-
 
 .photo3 {
-
     top:2100px;
-
 }
-
 
 .photo4 {
-
     top:3100px;
-
 }
-
 
 .photo5 {
-
     top:4100px;
-
 }
-
 
 .photo6 {
-
     top:5100px;
-
 }
 
 
 
-
-
-/* button */
-
+/* BUTTON */
 
 #gayBtn {
-
 
     display:block;
 
@@ -478,64 +438,30 @@ audio {
 
     padding:15px 40px;
 
-
     background:black;
 
     color:white;
-
 
     border:none;
 
     border-radius:30px;
 
-
     font-size:20px;
 
     cursor:pointer;
 
-
-}
-
-/* PAGE 3 NEWSPAPER WALLPAPER */
-
-.page3 {
-    margin:0;
-    background:#e8e3d8;
-    color:black;
-    overflow-x:hidden;
 }
 
 
-/* newspaper wallpaper */
 
-.newspaper-bg {
-
-    position:fixed;
-    inset:0;
-
-    background:
-    linear-gradient(
-        rgba(255,255,255,0.2),
-        rgba(255,255,255,0.2)
-    ),
-    repeating-linear-gradient(
-        0deg,
-        rgba(0,0,0,0.05) 0px,
-        rgba(0,0,0,0.05) 1px,
-        transparent 1px,
-        transparent 5px
-    ),
-    #e8e3d8;
-
-    z-index:0;
-}
-
-
-/* put content above wallpaper */
+/* MAKE CONTENT ABOVE WALLPAPER */
 
 #typing-title,
 .page-layout,
 #gayBtn {
+
     position:relative;
+
     z-index:5;
+
 }
