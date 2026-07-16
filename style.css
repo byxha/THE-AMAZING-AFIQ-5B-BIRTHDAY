@@ -400,14 +400,9 @@ audio {
 
 }
 .memory {
-
-    width:180px;
-    margin:20px;
-
-    opacity:1;
-
+    width:130px;
+    margin:15px;
 }
-
 
 .memory.right {
     float:right;
