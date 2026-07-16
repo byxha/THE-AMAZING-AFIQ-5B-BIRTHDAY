@@ -70,17 +70,12 @@ noBtn.onclick = function(event) {
     
     else {
 
-        // jadi character lari
-        noBtn.innerHTML = "🏃 NO";
+    noBtn.classList.add("running");
 
-        noBtn.style.transition = "3s ease";
+    setTimeout(() => {
+        noBtn.remove();
+    }, 6000);
 
-        noBtn.style.left = "120vw";
-
-        setTimeout(() => {
-            noBtn.remove();
-        }, 3000);
-
-    }
+}
 
 };
