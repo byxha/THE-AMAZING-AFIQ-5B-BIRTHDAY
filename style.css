@@ -435,47 +435,6 @@ audio {
 
 /* PHOTO FOLLOW TEXT */
 
-.photo1 {
-
-    top:250px;
-
-}
-
-
-.photo2 {
-
-    top:1200px;
-
-}
-
-
-.photo3 {
-
-    top:2200px;
-
-}
-
-
-.photo4 {
-
-    top:3300px;
-
-}
-
-
-.photo5 {
-
-    top:4500px;
-
-}
-
-
-.photo6 {
-
-    top:5700px;
-
-}
-
 
 
 /* ROTATE AESTHETIC */
@@ -525,4 +484,42 @@ audio {
 
     z-index:5;
 
+}
+.memory {
+    width:180px;
+    margin:25px;
+}
+
+
+.memory.right {
+    float:right;
+}
+
+
+.memory.left {
+    float:left;
+}
+
+
+.memory img {
+    width:100%;
+    padding:12px;
+    background:#fffdf5;
+    box-shadow:0 15px 25px rgba(0,0,0,0.3);
+}
+
+
+.wish-text {
+    width:45%;
+    margin:auto;
+    font-size:20px;
+    line-height:1.8;
+    text-align:justify;
+}
+
+
+.wish-text:after {
+    content:"";
+    display:block;
+    clear:both;
 }
