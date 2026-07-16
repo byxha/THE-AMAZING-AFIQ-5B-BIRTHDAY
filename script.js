@@ -68,9 +68,20 @@ noBtn.onclick = function(event) {
 
     } 
     
-    else {
+   else {
 
     noBtn.classList.add("running");
+
+    const buttonPosition = noBtn.getBoundingClientRect();
+
+    // Kalau button berada di kiri skrin, lari ke kanan
+    if (buttonPosition.left < window.innerWidth / 2) {
+        noBtn.style.setProperty("--escape-direction", "120vw");
+    } 
+    // Kalau button berada di kanan skrin, lari ke kiri
+    else {
+        noBtn.style.setProperty("--escape-direction", "-120vw");
+    }
 
     setTimeout(() => {
         noBtn.remove();
