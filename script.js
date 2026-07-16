@@ -21,10 +21,10 @@ if (stars) {
 
 
 
-const countdownDate = new Date(Date.now() + 5000).getTime();
+const countdownDate = new Date(Date.now() + 10000).getTime();
 
 const timer = setInterval(function () {
-
+console.log("timer running");
     const now = new Date().getTime();
     const distance = countdownDate - now;
 
