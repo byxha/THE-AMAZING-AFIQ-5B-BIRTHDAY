@@ -332,14 +332,9 @@ audio {
 /* CONTENT AREA */
 
 .page-layout {
-
     position:relative;
-
-    min-height:6000px;
-
+    min-height:7500px;
 }
-
-
 
 /* WISH TEXT */
 
@@ -399,36 +394,29 @@ audio {
 
 /* PHOTO POSITION FOLLOWING LONG WISH */
 
-
 .photo1 {
-    top:150px;
+    top:180px;
 }
-
 
 .photo2 {
-    top:850px;
+    top:900px;
 }
-
 
 .photo3 {
-    top:1700px;
+    top:1900px;
 }
-
 
 .photo4 {
-    top:2700px;
+    top:3000px;
 }
-
 
 .photo5 {
-    top:3900px;
+    top:4200px;
 }
-
 
 .photo6 {
-    top:5000px;
+    top:5600px;
 }
-
 /* BUTTON */
 
 #gayBtn {
@@ -501,4 +489,14 @@ body.page3 {
 
 .memory:nth-child(even) img {
     transform:rotate(5deg);
+}.memory {
+    position:absolute;
+    width:200px;
+}
+
+.memory img {
+    width:100%;
+    padding:12px;
+    background:#fffdf5;
+    box-shadow:0 15px 25px rgba(0,0,0,0.25);
 }
