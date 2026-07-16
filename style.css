@@ -340,9 +340,6 @@ audio {
 .page-layout {
 
     position:relative;
-
-    min-height:7500px;
-
     z-index:5;
 
 }
