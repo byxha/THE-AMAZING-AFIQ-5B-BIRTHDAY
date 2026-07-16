@@ -471,3 +471,6 @@ body.page3 {
     overflow-y:auto;
     height:auto;
 }
+.wish-text p {
+    margin-bottom: 35px;
+}
