@@ -1,78 +1,91 @@
-const title = document.getElementById("typing-title");
+console.log("PAGE 3 JS RUNNING");
 
-console.log("JS jalan");
+
+// TITLE TYPING
+
+const title = document.getElementById("typing-title");
 
 if (title) {
 
-    const text = "Breaking News: Jeybey Girl Falls for Keyel Boy";
+    const text = title.innerText;
 
     title.innerHTML = "";
 
     let i = 0;
 
-    const typing = setInterval(() => {
+    function typeTitle(){
 
-        title.innerHTML += text[i];
+        if(i < text.length){
 
-        i++;
+            title.innerHTML += text.charAt(i);
 
-        if (i >= text.length) {
-            clearInterval(typing);
+            i++;
+
+            setTimeout(typeTitle,80);
+
         }
 
-    }, 200);
+    }
+
+    typeTitle();
 
 }
 
-// WISH TYPING EFFECT
 
-// WISH TYPING EFFECT
+
+// WISH TYPING
 
 const wish = document.getElementById("wish");
 
-if (wish) {
+if(wish){
 
     const paragraphs = wish.querySelectorAll("p");
 
-    let paragraph = 0;
+    let pIndex = 0;
+
 
     function typeParagraph(){
 
-        if (paragraph < paragraphs.length){
+        if(pIndex < paragraphs.length){
 
-            const p = paragraphs[paragraph];
+            let p = paragraphs[pIndex];
 
-            const text = p.innerText;
+            let text = p.innerText;
 
-            p.innerText = "";
+            p.innerHTML = "";
 
             let i = 0;
 
-            function typeLetter(){
 
-                if (i < text.length){
+            function typing(){
+
+                if(i < text.length){
 
                     p.innerHTML += text.charAt(i);
 
                     i++;
 
-                    setTimeout(typeLetter, 15);
+                    setTimeout(typing,5); // lagi laju
 
-                } else {
+                }
 
-                    paragraph++;
+                else{
 
-                    setTimeout(typeParagraph, 500);
+                    pIndex++;
+
+                    setTimeout(typeParagraph,300);
 
                 }
 
             }
 
-            typeLetter();
+
+            typing();
 
         }
 
     }
+
 
     typeParagraph();
 
