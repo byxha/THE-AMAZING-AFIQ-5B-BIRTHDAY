@@ -518,3 +518,7 @@ audio {
     z-index:-1;
 
 }
+
+body.page3 {
+    background:#e8e3d8;
+}
