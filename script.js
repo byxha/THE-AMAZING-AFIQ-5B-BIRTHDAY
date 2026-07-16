@@ -108,8 +108,8 @@ const yesBtn = document.getElementById("yesBtn");
 
 if (yesBtn) {
 
-    yesBtn.onclick = function() {
-        window.location.href = "page2.html";
-    };
+    yesBtn.addEventListener("click", function() {
+        alert("YES WORKS");
+    });
 
 }
