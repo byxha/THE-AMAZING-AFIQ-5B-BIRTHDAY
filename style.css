@@ -172,3 +172,11 @@ button {
     }
 
 }
+.stars {
+    pointer-events: none;
+}
+
+button {
+    position: relative;
+    z-index: 20;
+}
