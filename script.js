@@ -29,6 +29,9 @@ const timer = setInterval(function () {
     document.getElementById("seconds").innerHTML = seconds;
 
 }, 1000);
+
+
+
 const noBtn = document.getElementById("noBtn");
 
 let escapeCount = 0;
