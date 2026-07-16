@@ -279,14 +279,17 @@ audio {
 /* ================= PAGE 3 ================= */
 
 .page3 {
+
     margin:0;
     background:#c9ad72;
     color:black;
     overflow-x:hidden;
+    overflow-y:auto;
 }
 
 
-/* OLD NEWSPAPER WALLPAPER */
+
+/* VINTAGE NEWSPAPER WALLPAPER */
 
 .newspaper-bg {
 
@@ -294,7 +297,7 @@ audio {
     inset:0;
 
     background:
-    radial-gradient(circle, rgba(120,80,20,0.08) 1px, transparent 1px),
+    radial-gradient(circle, rgba(100,70,20,0.08) 1px, transparent 1px),
     repeating-linear-gradient(
         0deg,
         rgba(80,50,10,0.08) 0px,
@@ -315,6 +318,9 @@ audio {
 
 #typing-title {
 
+    position:relative;
+    z-index:5;
+
     font-family:"Arial Black", Arial, sans-serif;
 
     font-size:55px;
@@ -329,20 +335,27 @@ audio {
 
 
 
-/* CONTENT AREA */
+/* CONTENT */
 
 .page-layout {
+
     position:relative;
+
     min-height:7500px;
+
+    z-index:5;
+
 }
 
-/* WISH TEXT */
+
+
+/* WISH */
 
 .wish-text {
 
     width:45%;
 
-    margin:50px auto;
+    margin:80px auto;
 
     font-family:Arial, sans-serif;
 
@@ -350,16 +363,41 @@ audio {
 
     line-height:1.8;
 
+    text-align:justify;
+
 }
 
 
-/* PHOTOS */
+.wish-text p {
+
+    margin-bottom:40px;
+
+}
+
+
+
+/* PHOTO FRAME */
 
 .memory {
 
     position:absolute;
 
-    width:220px;
+    width:200px;
+
+    opacity:0;
+
+    transform:translateY(50px);
+
+    transition:1s ease;
+
+}
+
+
+.memory.show {
+
+    opacity:1;
+
+    transform:translateY(0);
 
 }
 
@@ -368,55 +406,99 @@ audio {
 
     width:100%;
 
-    padding:10px;
+    padding:12px;
 
-    background:white;
+    background:#fffdf5;
 
-    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    box-shadow:0 15px 25px rgba(0,0,0,0.3);
 
 }
 
 
-/* LEFT RIGHT */
+
+/* SIDE POSITION */
 
 .left {
-    left:5%;
+
+    left:3%;
+
 }
 
 
 .right {
-    right:5%;
+
+    right:3%;
+
 }
 
 
 
-/* PHOTO POSITION */
-
-/* PHOTO POSITION FOLLOW WISH */
+/* PHOTO FOLLOW TEXT */
 
 .photo1 {
-    top:180px;
+
+    top:250px;
+
 }
+
 
 .photo2 {
-    top:750px;
+
+    top:1200px;
+
 }
+
 
 .photo3 {
-    top:1500px;
+
+    top:2200px;
+
 }
+
 
 .photo4 {
-    top:2500px;
+
+    top:3300px;
+
 }
+
 
 .photo5 {
-    top:3600px;
+
+    top:4500px;
+
 }
 
+
 .photo6 {
-    top:4700px;
+
+    top:5700px;
+
 }
+
+
+
+/* ROTATE AESTHETIC */
+
+.photo1 img,
+.photo3 img,
+.photo5 img {
+
+    transform:rotate(5deg);
+
+}
+
+
+.photo2 img,
+.photo4 img,
+.photo6 img {
+
+    transform:rotate(-5deg);
+
+}
+
+
+
 /* BUTTON */
 
 #gayBtn {
@@ -439,85 +521,8 @@ audio {
 
     cursor:pointer;
 
-}
-
-
-
-/* MAKE CONTENT ABOVE WALLPAPER */
-
-#typing-title,
-.page-layout,
-#gayBtn {
-
     position:relative;
 
     z-index:5;
 
-}
-
-body.page3 {
-    overflow-x:hidden;
-    overflow-y:auto;
-    height:auto;
-}
-.wish-text p {
-    margin-bottom: 35px;
-}
-
-/* PHOTO SCROLL EFFECT */
-
-.memory{
-
-    opacity:0;
-    transform:translateY(50px);
-    transition:1s ease;
-
-}
-
-
-.memory.show{
-
-    opacity:1;
-    transform:translateY(0);
-
-}
-
-
-.photo1 { transition-delay:0.1s; }
-.photo2 { transition-delay:0.2s; }
-.photo3 { transition-delay:0.3s; }
-.photo4 { transition-delay:0.4s; }
-.photo5 { transition-delay:0.5s; }
-.photo6 { transition-delay:0.6s; }
-
-
-.memory img {
-    width:100%;
-    padding:12px;
-    background:#fffdf5;
-    box-shadow:0 15px 25px rgba(0,0,0,0.25);
-}
-.memory {
-    positio9:absolute;
-    width:190px;
-}
-
-.left {
-    left:2%;
-}
-
-.right {
-    right:2%;
-}
-
-.photo1 img,
-.photo3 img,
-.photo5 img {
-    transform:rotate(5deg);
-}
-
-.photo2 img,
-.photo4 img,
-.photo6 img {
-    transform:rotate(-5deg);
 }
