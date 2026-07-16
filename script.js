@@ -35,41 +35,52 @@ const timer = setInterval(function () {
 const noBtn = document.getElementById("noBtn");
 
 let escapeCount = 0;
+let lastX = 0;
+let lastY = 0;
 
-function moveNoButton() {
+noBtn.onclick = function(event) {
 
     escapeCount++;
 
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
+    if (escapeCount < 3) {
 
-    // lari jauh bertentangan (random jauh)
-    let newX = Math.random() * (screenWidth - 150);
-    let newY = Math.random() * (screenHeight - 80);
+        noBtn.style.position = "fixed";
+        noBtn.style.transition = "0.4s ease";
 
-    noBtn.style.position = "fixed";
-    noBtn.style.left = newX + "px";
-    noBtn.style.top = newY + "px";
+        let moveX;
+        let moveY;
 
-    // selepas 3 kali, dia lari keluar
-    if (escapeCount >= 3) {
+        // lari jauh ke arah bertentangan
+        if (event.clientX < window.innerWidth / 2) {
+            moveX = window.innerWidth - 180;
+        } else {
+            moveX = 50;
+        }
 
-        noBtn.innerHTML = "🏃 NO 😭";
+        if (event.clientY < window.innerHeight / 2) {
+            moveY = window.innerHeight - 120;
+        } else {
+            moveY = 50;
+        }
 
-        noBtn.style.transition = "2s ease";
+        noBtn.style.left = moveX + "px";
+        noBtn.style.top = moveY + "px";
 
-        setTimeout(() => {
-            noBtn.style.left = "120vw";
-            noBtn.style.top = "50vh";
-        }, 100);
+    } 
+    
+    else {
+
+        // jadi character lari
+        noBtn.innerHTML = "🏃 NO";
+
+        noBtn.style.transition = "3s ease";
+
+        noBtn.style.left = "120vw";
 
         setTimeout(() => {
             noBtn.remove();
-        }, 2200);
+        }, 3000);
+
     }
-}
 
-
-// Untuk phone + laptop
-noBtn.addEventListener("mouseover", moveNoButton);
-noBtn.addEventListener("touchstart", moveNoButton);
+};
