@@ -98,7 +98,9 @@ noBtn.onclick = function(event) {
     }
 
     setTimeout(() => {
-        noBtn.remove();
-    }, 6000);
+    noBtn.remove();
+}, 6000);
+
+    }
 
 };
