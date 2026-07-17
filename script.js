@@ -20,36 +20,61 @@ if (stars) {
 }
 
 
+const countdownDate = new Date("July 19, 2026 00:00:00").getTime();
 
-const countdownDate = new Date(Date.now() + 10000).getTime();
 
-const timer = setInterval(function () {
-console.log("timer running");
+setInterval(function () {
+
     const now = new Date().getTime();
+
     const distance = countdownDate - now;
 
-    if (distance <= 0) {
-        clearInterval(timer);
+
+    if (distance > 0) {
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+        const hours = Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
+        );
+
+        const minutes = Math.floor(
+            (distance % (1000 * 60 * 60)) /
+            (1000 * 60)
+        );
+
+        const seconds = Math.floor(
+            (distance % (1000 * 60)) /
+            1000
+        );
+
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+
+    } else {
+
+
+        // ulang countdown 5 saat selepas tarikh berlalu
+
+        const fiveSec =
+        5 - (Math.floor(Date.now() / 1000) % 6);
+
 
         document.getElementById("days").innerHTML = "00";
         document.getElementById("hours").innerHTML = "00";
         document.getElementById("minutes").innerHTML = "00";
-        document.getElementById("seconds").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = fiveSec;
+
 
         document.getElementById("bebanSection").classList.remove("hidden");
 
-        return;
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
 
 }, 1000);
 
