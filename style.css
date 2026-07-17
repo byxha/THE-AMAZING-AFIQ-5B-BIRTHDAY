@@ -337,16 +337,11 @@ audio {
 /* MAIN */
 
 .page-layout {
-
+.page-layout {
     position:relative;
-
-    min-height:6000px;
-
+    min-height:auto;
     z-index:5;
-
 }
-
-
 
 /* TEXT */
 
