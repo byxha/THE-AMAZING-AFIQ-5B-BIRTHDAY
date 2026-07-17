@@ -535,6 +535,86 @@ audio {
 
     }
 
+/* ENVELOPE */
+
+.envelope {
+
+    text-align:center;
+
+    font-size:200px; /* BESARKAN SAMPUL */
+
+    cursor:pointer;
+
+    animation:floatEnvelope 2s infinite ease-in-out;
+
+}
+
+
+
+.envelope p {
+
+    font-size:25px;
+
+    margin-top:20px;
+
+}
+
+
+
+@keyframes floatEnvelope {
+
+    0%,100% {
+
+        transform:translateY(0) rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:translateY(-20px) rotate(5deg);
+
+    }
+
+}
+
+.photo-card {
+
+    display:none;
+
+    width:320px;
+
+    height:430px;
+
+    perspective:1000px;
+
+    cursor:pointer;
+
+    animation:popUp 0.8s ease;
+
+}
+
+@keyframes popUp {
+
+    from {
+
+        transform:scale(0) rotate(-20deg);
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        transform:scale(1) rotate(0);
+
+        opacity:1;
+
+    }
+
+}
+
+
 
     .memory {
 
