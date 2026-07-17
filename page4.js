@@ -17,28 +17,20 @@ const hearts = document.getElementById("hearts");
 
 envelope.onclick = function(){
 
+    // START MUSIC
+    bgMusic.play();
 
     envelope.style.display="none";
 
-
     createHearts();
-
-
 
     setTimeout(()=>{
 
-
         photoCard.classList.add("show");
-
 
     },1200);
 
-
-
 };
-
-
-
 
 
 photoCard.onclick=function(){
