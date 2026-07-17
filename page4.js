@@ -1,13 +1,13 @@
-window.onload = function () {
+const bgMusic = document.getElementById("bgMusic");
 
-    const bgMusic = document.getElementById("bgMusic");
+bgMusic.volume = 0.5;
 
-    setTimeout(() => {
-        bgMusic.pause();
-        alert("Music stopped!");
-    }, 5000);
+setTimeout(() => {
 
-};
+    bgMusic.pause();
+    bgMusic.currentTime = 0;
+
+}, 10000);
 
 const envelope = document.getElementById("envelope");
 const photoCard = document.getElementById("photoCard");
