@@ -7,7 +7,7 @@ setTimeout(() => {
     bgMusic.pause();
     bgMusic.currentTime = 0;
 
-}, 10000);
+}, 20000);
 
 const envelope = document.getElementById("envelope");
 const photoCard = document.getElementById("photoCard");
