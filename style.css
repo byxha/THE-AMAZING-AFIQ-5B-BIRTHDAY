@@ -374,24 +374,21 @@ audio {
 }
 
 
-
 /* ================= IMAGE ================= */
-
 
 .memory {
 
     position:absolute;
-
-    width:120px;
+    width:130px;
 
 }
 
 
 .memory img {
 
-    width:200%;
+    width:100%;
 
-    height:250px;
+    height:170px;
 
     object-fit:cover;
 
@@ -404,20 +401,18 @@ audio {
 
 }
 
-
-
 /* LEFT RIGHT */
 
 .left {
 
-    left:8%;
+    left:4%;
 
 }
 
 
 .right {
 
-    right:8%;
+    right:4%;
 
 }
 
