@@ -539,10 +539,11 @@ audio {
 
 /* ================= PAGE 4 ================= */
 
-
-.page4 {
+.page4{
 
     margin:0;
+    padding:0;
+
     height:100vh;
 
     background:#d8c08a;
@@ -555,37 +556,49 @@ audio {
 
     font-family:Arial,sans-serif;
 
+    color:black;
+
 }
 
 
+/* ================= ENVELOPE ================= */
 
-/* ENVELOPE */
-
-
-.envelope {
+.envelope{
 
     text-align:center;
 
-    font-size:220px;
-
     cursor:pointer;
 
-    animation:float 2s infinite ease-in-out;
+    user-select:none;
+
+    animation:floatEnvelope 2s ease-in-out infinite;
 
 }
 
 
+.envelope{
 
-.envelope p {
-
-    font-size:25px;
+    font-size:220px;
 
 }
 
 
+.envelope p{
 
-@keyframes float {
+    color:white;
 
+    font-size:26px;
+
+    margin-top:15px;
+
+    text-shadow:0 0 10px rgba(255,255,255,.8);
+
+    font-weight:bold;
+
+}
+
+
+@keyframes floatEnvelope{
 
     0%,100%{
 
@@ -593,22 +606,18 @@ audio {
 
     }
 
-
     50%{
 
-        transform:translateY(-25px);
+        transform:translateY(-20px);
 
     }
-
 
 }
 
 
+/* ================= HEART CONFETTI ================= */
 
-/* HEARTS */
-
-
-#hearts {
+#hearts{
 
     position:fixed;
 
@@ -616,199 +625,187 @@ audio {
 
     pointer-events:none;
 
+    z-index:100;
+
 }
 
 
-
-.heart {
+.heart{
 
     position:absolute;
 
-    font-size:35px;
+    font-size:34px;
 
-    animation:shoot 1.5s forwards;
-
-}
-
-
-
-@keyframes shoot {
-
-
-from {
-
-    transform:translate(0,0) scale(0);
-
-    opacity:1;
+    animation:explode 1.5s ease-out forwards;
 
 }
 
 
-to {
+@keyframes explode{
 
-    transform:
-    translate(var(--x),var(--y))
-    scale(1.5);
+    from{
 
-    opacity:0;
+        transform:translate(0,0) scale(0);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+        translate(var(--x),var(--y))
+        scale(1.5);
+
+        opacity:0;
+
+    }
 
 }
 
 
-}
+/* ================= PHOTO CARD ================= */
 
-
-
-
-/* PHOTO CARD */
-
-
-.photo-card {
+.photo-card{
 
     display:none;
 
     position:absolute;
 
     top:50%;
-
     left:50%;
 
-    width:350px;
-
+    width:360px;
     height:500px;
 
     transform:translate(-50%,-50%);
 
-    perspective:1000px;
+    perspective:1200px;
 
     cursor:pointer;
 
 }
 
 
-
-.photo-card.show {
-
+.photo-card.show{
 
     display:block;
 
-    animation:pop 0.8s ease;
-
-
-}
-
-
-
-@keyframes pop {
-
-
-from {
-
-    transform:
-    translate(-50%,-50%)
-    scale(0)
-    rotate(-20deg);
-
-    opacity:0;
+    animation:cardPop .8s ease;
 
 }
 
 
-to {
+@keyframes cardPop{
 
-    transform:
-    translate(-50%,-50%)
-    scale(1)
-    rotate(0);
+    from{
 
-    opacity:1;
+        transform:
+        translate(-50%,-50%)
+        scale(.2)
+        rotate(-15deg);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:
+        translate(-50%,-50%)
+        scale(1)
+        rotate(0);
+
+        opacity:1;
+
+    }
 
 }
 
 
-}
+/* ================= FLIP ================= */
 
-
-
-
-.card-inner {
+.card-inner{
 
     width:100%;
-
     height:100%;
+
+    position:relative;
 
     transform-style:preserve-3d;
 
-    transition:0.8s;
-
+    transition:.8s;
 
 }
 
 
-
-.photo-card.flip .card-inner {
-
+.photo-card.flip .card-inner{
 
     transform:rotateY(180deg);
 
-
 }
 
 
-
+/* ================= FRONT & BACK ================= */
 
 .card-front,
-.card-back {
-
+.card-back{
 
     position:absolute;
 
     width:100%;
-
     height:100%;
-
 
     background:#fffdf5;
 
-    padding:20px;
+    border-radius:10px;
+
+    padding:18px;
 
     box-sizing:border-box;
 
-
     backface-visibility:hidden;
 
-
-    box-shadow:
-    0 20px 40px rgba(0,0,0,.3);
-
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
 
     text-align:center;
 
+    color:black;
 
 }
 
 
+/* ================= PHOTO ================= */
 
-.card-front img {
-
+.card-front img{
 
     width:100%;
 
-    height:400px;
+    height:390px;
 
     object-fit:cover;
 
+    border-radius:6px;
 
 }
 
 
+.card-front p{
+
+    margin-top:15px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
 
 
-.card-back {
+/* ================= LETTER ================= */
 
+.card-back{
 
     transform:rotateY(180deg);
-
 
     display:flex;
 
@@ -818,10 +815,74 @@ to {
 
     flex-direction:column;
 
+    line-height:1.8;
+
+    padding:35px;
+
+}
+
+
+.card-back h2{
+
+    margin:10px 0;
+
+    font-size:30px;
+
+    color:black;
+
+}
+
+
+.card-back p{
 
     font-size:20px;
 
-    line-height:1.5;
+    color:black;
 
+    margin:0;
+
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+    .envelope{
+
+        font-size:150px;
+
+    }
+
+    .envelope p{
+
+        font-size:20px;
+
+    }
+
+    .photo-card{
+
+        width:280px;
+        height:420px;
+
+    }
+
+    .card-front img{
+
+        height:300px;
+
+    }
+
+    .card-back h2{
+
+        font-size:24px;
+
+    }
+
+    .card-back p{
+
+        font-size:16px;
+
+    }
 
 }
