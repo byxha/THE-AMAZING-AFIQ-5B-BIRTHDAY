@@ -1,26 +1,13 @@
-const bgMusic = document.getElementById("bgMusic");
+window.onload = function () {
 
-bgMusic.volume = 0.5;
+    const bgMusic = document.getElementById("bgMusic");
 
-// Fade out selepas 8 saat
-setTimeout(() => {
+    setTimeout(() => {
+        bgMusic.pause();
+        alert("Music stopped!");
+    }, 5000);
 
-    let fade = setInterval(() => {
-
-        if (bgMusic.volume > 0.05) {
-
-            bgMusic.volume -= 0.05;
-
-        } else {
-
-            bgMusic.pause();
-            clearInterval(fade);
-
-        }
-
-    }, 200);
-
-}, 8000);
+};
 
 const envelope = document.getElementById("envelope");
 const photoCard = document.getElementById("photoCard");
