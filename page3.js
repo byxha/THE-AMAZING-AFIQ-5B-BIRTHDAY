@@ -33,60 +33,49 @@ if (title) {
 
 
 
-// ================= WISH FAST TYPE EFFECT =================
-
-// effect jalan ikut paragraph
+// ================= WISH TYPE EFFECT =================
 
 const paragraphs = document.querySelectorAll(".wish-text p");
 
+let current = 0;
 
-paragraphs.forEach((p, index) => {
+function typeParagraph() {
 
+    if (current >= paragraphs.length) return;
+
+    const p = paragraphs[current];
 
     const text = p.innerHTML;
 
-
     p.innerHTML = "";
 
+    let i = 0;
 
-    setTimeout(() => {
+    function typing() {
 
+        if (i < text.length) {
 
-        let i = 0;
+            p.innerHTML += text.charAt(i);
 
+            i++;
 
-        function typeWish() {
+            setTimeout(typing, 5);
 
+        } else {
 
-            if (i < text.length) {
+            current++;
 
-
-                p.innerHTML += text.charAt(i);
-
-                i++;
-
-
-                setTimeout(typeWish, 3);
-
-
-            }
-
+            setTimeout(typeParagraph, 300);
 
         }
 
+    }
 
-        typeWish();
+    typing();
 
+}
 
-
-    }, index * 500);
-
-
-
-});
-
-
-
+typeParagraph();
 
 // ================= PHOTO FADE IN SCROLL =================
 
