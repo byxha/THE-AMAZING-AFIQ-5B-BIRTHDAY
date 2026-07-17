@@ -35,7 +35,7 @@ h2 {
 /* Countdown */
 #countdown {
     font-family: "Arial Black", Arial, sans-serif;
-    font-size: 35px;
+    font-size: 39px;
     margin: 30px;
     line-height: 2;
 }
@@ -876,7 +876,7 @@ audio {
     
     .device-note {
     font-family: Arial, sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     color: #ffffff;
     text-align:center;
     letter-spacing:0.5px;
