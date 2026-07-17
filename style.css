@@ -500,9 +500,9 @@ audio {
 
     display:block;
 
-    margin:100px auto;
+    margin:50px auto;
 
-    padding:15px 45px;
+    padding:25px 55px;
 
     background:black;
 
@@ -512,7 +512,7 @@ audio {
 
     border-radius:30px;
 
-    font-size:20px;
+    font-size:30px;
 
     cursor:pointer;
 
