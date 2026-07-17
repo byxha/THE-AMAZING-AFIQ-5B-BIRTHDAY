@@ -536,24 +536,18 @@ audio {
     }
 
 }
-/* PAGE 4 */
+
+/* ================= PAGE 4 ================= */
 
 .page4 {
 
     margin:0;
-
     height:100vh;
-
     background:#d8c08a;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     overflow:hidden;
-
     font-family:Arial, sans-serif;
 
 }
@@ -564,22 +558,23 @@ audio {
 .envelope {
 
     text-align:center;
-
-    font-size:200px;
-
     cursor:pointer;
-
     animation:floatEnvelope 2s infinite ease-in-out;
 
 }
 
 
+.envelope img {
+
+    width:300px;
+}
+
 
 .envelope p {
 
-    font-size:25px;
-
-    margin-top:20px;
+    font-size:30px;
+    color:black;
+    font-weight:bold;
 
 }
 
@@ -587,24 +582,15 @@ audio {
 
 @keyframes floatEnvelope {
 
-
-    0%,100% {
-
-        transform:translateY(0) rotate(0deg);
-
+    0%,100%{
+        transform:translateY(0);
     }
 
-
-    50% {
-
-        transform:translateY(-20px) rotate(5deg);
-
+    50%{
+        transform:translateY(-25px);
     }
-
 
 }
-
-
 
 
 
@@ -613,55 +599,44 @@ audio {
 #hearts {
 
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
-    z-index:10;
+    z-index:20;
 
 }
-
 
 
 .heart {
 
     position:absolute;
-
-    font-size:30px;
-
-    animation:explode 1.5s ease-out forwards;
+    font-size:35px;
+    animation:explode 1.5s forwards;
 
 }
-
 
 
 @keyframes explode {
 
 
-    from {
+from {
 
-        transform:translate(0,0) scale(0);
-
-        opacity:1;
-
-    }
-
-
-    to {
-
-        transform:
-        translate(var(--x),var(--y))
-        scale(1.5);
-
-        opacity:0;
-
-    }
-
+    transform:translate(0,0) scale(0);
+    opacity:1;
 
 }
 
 
+to {
+
+    transform:
+    translate(var(--x),var(--y))
+    scale(1.5);
+
+    opacity:0;
+
+}
+
+}
 
 
 
@@ -670,13 +645,9 @@ audio {
 .photo-card {
 
     display:none;
-
-    width:320px;
-
-    height:430px;
-
+    width:350px;
+    height:480px;
     perspective:1000px;
-
     cursor:pointer;
 
     animation:popUp 0.8s ease;
@@ -685,40 +656,11 @@ audio {
 
 
 
-@keyframes popUp {
-
-
-    from {
-
-        transform:scale(0) rotate(-20deg);
-
-        opacity:0;
-
-    }
-
-
-    to {
-
-        transform:scale(1) rotate(0);
-
-        opacity:1;
-
-    }
-
-
-}
-
-
-
-
 .card-inner {
 
     width:100%;
-
     height:100%;
-
-    transition:0.8s;
-
+    transition:.8s;
     transform-style:preserve-3d;
 
 }
@@ -736,10 +678,9 @@ audio {
 .card-front,
 .card-back {
 
+
     position:absolute;
-
     width:100%;
-
     height:100%;
 
     padding:20px;
@@ -750,9 +691,8 @@ audio {
 
     backface-visibility:hidden;
 
-    box-shadow:0 15px 30px rgba(0,0,0,0.3);
-
-    text-align:center;
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.3);
 
 }
 
@@ -761,9 +701,7 @@ audio {
 .card-front img {
 
     width:100%;
-
-    height:330px;
-
+    height:380px;
     object-fit:cover;
 
 }
@@ -771,6 +709,7 @@ audio {
 
 
 .card-back {
+
 
     transform:rotateY(180deg);
 
@@ -782,8 +721,36 @@ audio {
 
     flex-direction:column;
 
-    font-size:20px;
+    color:black;
 
-    line-height:1.5;
+    font-size:22px;
+
+    line-height:1.6;
+
+    text-align:center;
+
+}
+
+
+
+
+@keyframes popUp {
+
+from{
+
+    transform:scale(0);
+
+    opacity:0;
+
+}
+
+
+to{
+
+    transform:scale(1);
+
+    opacity:1;
+
+}
 
 }
