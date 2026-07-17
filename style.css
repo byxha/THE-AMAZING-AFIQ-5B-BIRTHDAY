@@ -410,14 +410,14 @@ audio {
 
 .left {
 
-    left:5%;
+    left:8%;
 
 }
 
 
 .right {
 
-    right:5%;
+    right:8%;
 
 }
 
@@ -434,19 +434,19 @@ audio {
 }
 
 .photo3 {
-    top:1200px;
+    top:950px;
 }
 
 .photo4 {
-    top:1900px;
+    top:1200px;
 }
 
 .photo5 {
-    top:2700px;
+    top:1500px;
 }
 
 .photo6 {
-    top:3500px;
+    top:1900px;
 }
 
 /* POLAROID ROTATION */
