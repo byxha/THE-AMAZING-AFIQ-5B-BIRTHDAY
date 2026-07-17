@@ -1,3 +1,27 @@
+const bgMusic = document.getElementById("bgMusic");
+
+bgMusic.volume = 0.5;
+
+// Fade out selepas 8 saat
+setTimeout(() => {
+
+    let fade = setInterval(() => {
+
+        if (bgMusic.volume > 0.05) {
+
+            bgMusic.volume -= 0.05;
+
+        } else {
+
+            bgMusic.pause();
+            clearInterval(fade);
+
+        }
+
+    }, 200);
+
+}, 8000);
+
 const envelope = document.getElementById("envelope");
 const photoCard = document.getElementById("photoCard");
 const hearts = document.getElementById("hearts");
