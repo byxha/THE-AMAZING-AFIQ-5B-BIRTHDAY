@@ -3,29 +3,24 @@ const photoCard = document.getElementById("photoCard");
 const hearts = document.getElementById("hearts");
 
 
-// CLICK ENVELOPE
 
 envelope.onclick = function(){
 
 
-    // hilangkan sampul
+    envelope.style.display="none";
 
-    envelope.style.display = "none";
-
-
-    // keluarkan love confetti
 
     createHearts();
 
 
 
-    // keluar gambar selepas confetti
+    setTimeout(()=>{
 
-    setTimeout(function(){
 
-        photoCard.style.display = "block";
+        photoCard.classList.add("show");
 
-    },1500);
+
+    },1200);
 
 
 
@@ -34,55 +29,49 @@ envelope.onclick = function(){
 
 
 
-// CLICK PHOTO UNTUK FLIP
 
-photoCard.onclick = function(){
+photoCard.onclick=function(){
+
 
     photoCard.classList.toggle("flip");
 
+
 };
 
 
 
 
-
-// LOVE CONFETTI FUNCTION
 
 function createHearts(){
 
 
-    for(let i = 0; i < 50; i++){
+    for(let i=0;i<60;i++){
 
 
-        let heart = document.createElement("div");
+        let heart=document.createElement("div");
 
 
-        heart.innerHTML = "❤️";
+        heart.className="heart";
 
-
-        heart.className = "heart";
-
-
-
-        // keluar dari tengah sampul
-
-        heart.style.left = "50%";
-
-        heart.style.top = "45%";
+        heart.innerHTML="❤️";
 
 
 
-        // arah pancutan random
+        heart.style.left="50%";
+
+        heart.style.top="50%";
+
+
 
         heart.style.setProperty(
             "--x",
-            (Math.random() * 500 - 250) + "px"
+            Math.random()*700-350+"px"
         );
 
 
         heart.style.setProperty(
             "--y",
-            (Math.random() * 500 - 250) + "px"
+            Math.random()*700-350+"px"
         );
 
 
@@ -91,15 +80,15 @@ function createHearts(){
 
 
 
-        // buang selepas animation
-
-        setTimeout(function(){
+        setTimeout(()=>{
 
             heart.remove();
 
         },1500);
 
 
+
     }
+
 
 }
