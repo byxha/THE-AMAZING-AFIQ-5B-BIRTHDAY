@@ -551,6 +551,45 @@ audio {
 
 
 
+/* PAGE 4 */
+
+.page4 {
+
+    margin:0;
+
+    height:100vh;
+
+    background:#d8c08a;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    font-family:Arial, sans-serif;
+
+}
+
+
+/* ENVELOPE */
+
+.envelope {
+
+    text-align:center;
+
+    font-size:200px;
+
+    cursor:pointer;
+
+    animation:floatEnvelope 2s infinite ease-in-out;
+
+}
+
+
+
 .envelope p {
 
     font-size:25px;
@@ -563,11 +602,13 @@ audio {
 
 @keyframes floatEnvelope {
 
+
     0%,100% {
 
         transform:translateY(0) rotate(0deg);
 
     }
+
 
     50% {
 
@@ -575,7 +616,71 @@ audio {
 
     }
 
+
 }
+
+
+
+
+
+/* HEART CONFETTI */
+
+#hearts {
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:10;
+
+}
+
+
+
+.heart {
+
+    position:absolute;
+
+    font-size:30px;
+
+    animation:explode 1.5s ease-out forwards;
+
+}
+
+
+
+@keyframes explode {
+
+
+    from {
+
+        transform:translate(0,0) scale(0);
+
+        opacity:1;
+
+    }
+
+
+    to {
+
+        transform:
+        translate(var(--x),var(--y))
+        scale(1.5);
+
+        opacity:0;
+
+    }
+
+
+}
+
+
+
+
+
+/* PHOTO CARD */
 
 .photo-card {
 
@@ -593,7 +698,10 @@ audio {
 
 }
 
+
+
 @keyframes popUp {
+
 
     from {
 
@@ -612,37 +720,85 @@ audio {
 
     }
 
+
+}
+
+
+
+
+.card-inner {
+
+    width:100%;
+
+    height:100%;
+
+    transition:0.8s;
+
+    transform-style:preserve-3d;
+
 }
 
 
 
-    .memory {
+.photo-card.flip .card-inner {
 
-        width:90px;
-
-    }
-
-
-    .left {
-
-        left:1%;
-
-    }
-
-
-    .right {
-
-        right:1%;
-
-    }
+    transform:rotateY(180deg);
 
 }
 
-.wish-text {
-    margin-bottom:0;
+
+
+.card-front,
+.card-back {
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    padding:20px;
+
+    box-sizing:border-box;
+
+    background:#fffdf5;
+
+    backface-visibility:hidden;
+
+    box-shadow:0 15px 30px rgba(0,0,0,0.3);
+
+    text-align:center;
+
 }
 
 
-#gayBtn {
-    margin-top:20px;
+
+.card-front img {
+
+    width:100%;
+
+    height:330px;
+
+    object-fit:cover;
+
+}
+
+
+
+.card-back {
+
+    transform:rotateY(180deg);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    font-size:20px;
+
+    line-height:1.5;
+
 }
