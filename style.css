@@ -896,3 +896,35 @@ audio {
     }
 
 }
+#lockScreen {
+
+    position:fixed;
+
+    inset:0;
+
+    background:black;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-family:Arial, sans-serif;
+
+    font-size:50px;
+
+    z-index:9999;
+
+}
+
+
+#lockScreen p {
+
+    font-size:20px;
+
+}
