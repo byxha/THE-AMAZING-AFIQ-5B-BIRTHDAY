@@ -539,88 +539,106 @@ audio {
 
 /* ================= PAGE 4 ================= */
 
+
 .page4 {
 
     margin:0;
     height:100vh;
+
     background:#d8c08a;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     overflow:hidden;
-    font-family:Arial, sans-serif;
+
+    font-family:Arial,sans-serif;
 
 }
+
 
 
 /* ENVELOPE */
 
+
 .envelope {
 
     text-align:center;
+
+    font-size:220px;
+
     cursor:pointer;
-    animation:floatEnvelope 2s infinite ease-in-out;
+
+    animation:float 2s infinite ease-in-out;
 
 }
 
-
-.envelope img {
-
-    width:300px;
-}
 
 
 .envelope p {
 
-    font-size:30px;
-    color:black;
-    font-weight:bold;
+    font-size:25px;
 
 }
 
 
 
-@keyframes floatEnvelope {
+@keyframes float {
+
 
     0%,100%{
+
         transform:translateY(0);
+
     }
 
+
     50%{
+
         transform:translateY(-25px);
+
     }
+
 
 }
 
 
 
-/* HEART CONFETTI */
+/* HEARTS */
+
 
 #hearts {
 
     position:fixed;
+
     inset:0;
+
     pointer-events:none;
-    z-index:20;
 
 }
+
 
 
 .heart {
 
     position:absolute;
+
     font-size:35px;
-    animation:explode 1.5s forwards;
+
+    animation:shoot 1.5s forwards;
 
 }
 
 
-@keyframes explode {
+
+@keyframes shoot {
 
 
 from {
 
     transform:translate(0,0) scale(0);
+
     opacity:1;
 
 }
@@ -636,32 +654,93 @@ to {
 
 }
 
+
 }
+
 
 
 
 /* PHOTO CARD */
 
+
 .photo-card {
 
     display:none;
+
+    position:absolute;
+
+    top:50%;
+
+    left:50%;
+
     width:350px;
-    height:480px;
+
+    height:500px;
+
+    transform:translate(-50%,-50%);
+
     perspective:1000px;
+
     cursor:pointer;
 
-    animation:popUp 0.8s ease;
+}
+
+
+
+.photo-card.show {
+
+
+    display:block;
+
+    animation:pop 0.8s ease;
+
 
 }
+
+
+
+@keyframes pop {
+
+
+from {
+
+    transform:
+    translate(-50%,-50%)
+    scale(0)
+    rotate(-20deg);
+
+    opacity:0;
+
+}
+
+
+to {
+
+    transform:
+    translate(-50%,-50%)
+    scale(1)
+    rotate(0);
+
+    opacity:1;
+
+}
+
+
+}
+
 
 
 
 .card-inner {
 
     width:100%;
+
     height:100%;
-    transition:.8s;
+
     transform-style:preserve-3d;
+
+    transition:0.8s;
+
 
 }
 
@@ -669,9 +748,12 @@ to {
 
 .photo-card.flip .card-inner {
 
+
     transform:rotateY(180deg);
 
+
 }
+
 
 
 
@@ -680,19 +762,28 @@ to {
 
 
     position:absolute;
+
     width:100%;
+
     height:100%;
+
+
+    background:#fffdf5;
 
     padding:20px;
 
     box-sizing:border-box;
 
-    background:#fffdf5;
 
     backface-visibility:hidden;
 
+
     box-shadow:
-    0 15px 30px rgba(0,0,0,.3);
+    0 20px 40px rgba(0,0,0,.3);
+
+
+    text-align:center;
+
 
 }
 
@@ -700,11 +791,16 @@ to {
 
 .card-front img {
 
+
     width:100%;
-    height:380px;
+
+    height:400px;
+
     object-fit:cover;
 
+
 }
+
 
 
 
@@ -712,6 +808,7 @@ to {
 
 
     transform:rotateY(180deg);
+
 
     display:flex;
 
@@ -721,36 +818,10 @@ to {
 
     flex-direction:column;
 
-    color:black;
 
-    font-size:22px;
+    font-size:20px;
 
-    line-height:1.6;
+    line-height:1.5;
 
-    text-align:center;
-
-}
-
-
-
-
-@keyframes popUp {
-
-from{
-
-    transform:scale(0);
-
-    opacity:0;
-
-}
-
-
-to{
-
-    transform:scale(1);
-
-    opacity:1;
-
-}
 
 }
