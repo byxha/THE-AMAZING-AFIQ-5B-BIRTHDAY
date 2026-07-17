@@ -389,9 +389,9 @@ audio {
 
 .memory img {
 
-    width:100%;
+    width:150%;
 
-    height:150px;
+    height:200px;
 
     object-fit:cover;
 
@@ -426,27 +426,27 @@ audio {
 /* IMAGE POSITION */
 
 .photo1 {
-    top:150px;
+    top:50px;
 }
 
 .photo2 {
-    top:200px;
+    top:80px;
 }
 
 .photo3 {
-    top:300px;
+    top:90px;
 }
 
 .photo4 {
-    top:400px;
+    top:110px;
 }
 
 .photo5 {
-    top:500px;
+    top:150px;
 }
 
 .photo6 {
-    top:650px;
+    top:200px;
 }
 
 /* POLAROID ROTATION */
