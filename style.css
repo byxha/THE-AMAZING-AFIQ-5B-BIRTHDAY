@@ -535,22 +535,7 @@ audio {
 
     }
 
-/* ENVELOPE */
-
-.envelope {
-
-    text-align:center;
-
-    font-size:200px; /* BESARKAN SAMPUL */
-
-    cursor:pointer;
-
-    animation:floatEnvelope 2s infinite ease-in-out;
-
 }
-
-
-
 /* PAGE 4 */
 
 .page4 {
